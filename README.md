@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# [Color Searcher]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An effortless color searcher which pulls color data and sort by similarity according to the provided color.
 
-## Available Scripts
+To calculate color similarity, it uses the pythagorean theorem in 3D to find the shortest distance from the RGB values of the color.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- Live Demo
+- Features
+- Clone this Repository
+- Technology Stack
+- Style
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Demo
+Take a look at the live version here:
+` https://color-searcher-ivory.vercel.app/`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+It a single-page website in React that contains a color search tool. The tool
+operates in the following way:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Starts by doing a GET request to all colors from the XKCD colors JSON file:
+  https://raw.githubusercontent.com/okmediagroup/color-test-resources/master/xkcd-colors.json
+- Once the colors are fetched, it display them all in a large table containing information
+  about each color.
+- Allows the user to search the colors by inputting a CSS color code (Ie. “#FF0000”,
+  “rgb(255,0,0)”) and hitting Enter.
+- If the inputted color is valid, sort the colors by their similarity to the inputted
+  color and display the top ~100 results.
+- It utilises the pythagorean theorem in 3D to find the shortest distance from the RGB values of
+  the  color.
+- If the inputted colour is invalid and the user hits Enter, it displays an error message
+  saying that the colour is invalid.
+- If the initial fetch of the colours fails,it shows a Retry button that retries the fetch when
+  clicked.
 
-### `npm run build`
+## Run the App
+### Clone this Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``` 
+git clone hhttps://github.com/richagautam21/ColorSearcher
+```
+### **Initial Setup**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the following when setting up the project for the first time:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run install
+```
+## Technology Stack
 
-### `npm run eject`
+- React - Frontend Library
+- TypeScript for type check
+- React Hooks for Functional Components.
+- Styled Components for styling
+- Create-react-app for bundling.
+- NPM to install the front-end libraries and the bundler.
+- Colord to manage, install, and generate color profiles to accurately color manage input and output devices
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Style
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Valera Round - https://fonts.google.com/specimen/Varela+Round
