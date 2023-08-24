@@ -1,4 +1,4 @@
-# [Color Searcher]
+# Color Searcher
 
 An effortless color searcher which pulls color data and sort by similarity according to the provided color.
 
@@ -13,16 +13,16 @@ To calculate color similarity, it uses the pythagorean theorem in 3D to find the
 - Style
 
 ## Live Demo
+
 Take a look at the live version here:
-` https://color-searcher-ivory.vercel.app/`
+`https://color-searcher-three.vercel.app/`
 
 ## Features
 
 It a single-page website in React that contains a color search tool. The tool
 operates in the following way:
 
-- Starts by doing a GET request to all colors from the XKCD colors JSON file:
-  https://raw.githubusercontent.com/okmediagroup/color-test-resources/master/xkcd-colors.json
+- Starts by doing a GET request to all colors from the XKCD colors JSON file API.
 - Once the colors are fetched, it display them all in a large table containing information
   about each color.
 - Allows the user to search the colors by inputting a CSS color code (Ie. “#FF0000”,
@@ -40,7 +40,7 @@ operates in the following way:
 ### Clone this Repository
 
 ``` 
-git clone hhttps://github.com/richagautam21/ColorSearcher
+git clone hhttps://github.com/richagautam21/Color-Searcher
 ```
 ### **Initial Setup**
 
@@ -51,7 +51,7 @@ npm run install
 ```
 ## Technology Stack
 
-- React - Frontend Library
+- React for Frontend Library
 - TypeScript for type check
 - React Hooks for Functional Components.
 - Styled Components for styling
